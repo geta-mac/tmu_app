@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_08_145451) do
+ActiveRecord::Schema.define(version: 2021_07_18_093828) do
+
+  create_table "clubs", force: :cascade do |t|
+    t.integer "club_name"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "customers", force: :cascade do |t|
     t.string "name", null: false
@@ -22,6 +29,14 @@ ActiveRecord::Schema.define(version: 2021_07_08_145451) do
     t.integer "gender"
     t.date "birthday"
     t.text "memo"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.integer "user_id"
+    t.text "content"
+    t.binary "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
