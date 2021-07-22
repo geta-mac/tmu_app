@@ -106,6 +106,33 @@ export const constantRoutes = [
         hidden: true
       }
     ]
+  },
+  {
+    path: '/post',
+    component: Layout,
+    redirect: '/post/index',
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/post/index'),
+        name: 'Post',
+        meta: { title: 'post', icon: 'user', noCache: true }
+      },
+      {
+        path: 'new',
+        component: () => import('@/views/post/new'),
+        name: 'newPost',
+        meta: { title: 'new_post', noCache: true },
+        hidden: true
+      },
+      {
+        path: 'edit',
+        component: () => import('@/views/post/edit'),
+        name: 'editPost',
+        meta: { title: 'edit_post', noCache: true },
+        hidden: true
+      }
+    ]
   }
 ]
 
