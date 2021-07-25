@@ -106,7 +106,35 @@ export const constantRoutes = [
         hidden: true
       }
     ]
+  },
+  {
+    path: '/post',
+    component: Layout,
+    redirect: '/post/index',
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/post/index'),
+        name: 'Post',
+        meta: { title: 'post', icon: 'user', noCache: true }
+      }
+      // {
+      //   path: 'new',
+      //   component: () => import('@/views/customer/new'),
+      //   name: 'newCustomer',
+      //   meta: { title: 'new_customer', noCache: true },
+      //   hidden: true
+      // },
+      // {
+      //   path: 'edit',
+      //   component: () => import('@/views/customer/edit'),
+      //   name: 'editCustomer',
+      //   meta: { title: 'edit_customer', noCache: true },
+      //   hidden: true
+      // }
+    ]
   }
+
 ]
 
 const createRouter = () => new Router({
