@@ -7,3 +7,44 @@
     </el-row>
   </div>
 </template>
+
+<script>
+/* import PostTable from './components/PostTable'
+import { mapGetters } from 'vuex'
+
+export default {
+  name: 'Post',
+  data() {
+    return {
+      key: 0
+    }
+  },
+  computed: {
+    ...mapGetters({
+      posts: 'post/postAll'
+    })
+  },
+  mounted() {
+    this.$store.dispatch('post/getPosts')
+  },
+  methods: {
+    doUpdate(index, row) {
+      this.$router.push({
+        name: 'editPost',
+        params: { form: row }
+      })
+    },
+    doDelete(index, row) {
+      const ans = confirm(this.$t('post.delete_message'))
+      if (!ans) return
+      this.$store.dispatch('post/deletePost', row)
+      this.$nextTick(() => {
+        this.$store.dispatch('post/getPosts')
+        this.key = this.key ? 0 : 1
+      })
+    }
+  }
+}
+*/
+</script>
+
