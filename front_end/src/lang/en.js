@@ -188,6 +188,10 @@ export default {
     memo: 'Memo',
     delete_message: 'May I delete it?'
   },
+  post: {
+    name: 'Name',
+    content: 'Content'
+  },
   gender: {
     male: 'Male',
     female: 'Female'
