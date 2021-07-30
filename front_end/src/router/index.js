@@ -117,19 +117,19 @@ export const constantRoutes = [
         component: () => import('@/views/post/index'),
         name: 'Post',
         meta: { title: 'post', icon: 'user', noCache: true }
+      },
+      {
+        path: 'new',
+        component: () => import('@/views/post/new'),
+        name: 'newPost',
+        meta: { title: 'new_post', noCache: true },
+        hidden: true
       }
       // {
-      //   path: 'new',
-      //   component: () => import('@/views/customer/new'),
-      //   name: 'newCustomer',
-      //   meta: { title: 'new_customer', noCache: true },
-      //   hidden: true
-      // },
-      // {
       //   path: 'edit',
-      //   component: () => import('@/views/customer/edit'),
-      //   name: 'editCustomer',
-      //   meta: { title: 'edit_customer', noCache: true },
+      //   component: () => import('@/views/post/edit'),
+      //   name: 'editPost',
+      //   meta: { title: 'edit_post', noCache: true },
       //   hidden: true
       // }
     ]

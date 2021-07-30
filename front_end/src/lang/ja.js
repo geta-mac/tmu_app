@@ -188,6 +188,10 @@ export default {
     memo: 'メモ',
     delete_message: '削除してもよろしいですか？'
   },
+  post: {
+    name: '名前',
+    content: '内容'
+  },
   gender: {
     male: '男性',
     female: '女性'
