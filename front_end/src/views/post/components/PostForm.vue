@@ -34,12 +34,12 @@ export default {
     }
   },
   methods: {
-    onSubmit() {
-      if (!this.form.name) return
-      // store/modules/postのアクシpostCustomerを呼び出し、
-      this.$store.dispatch('post/createPost', this.form)
-      this.$router.push({ path: '/post/index' })
-    },
+    // onSubmit() {
+    //   if (!this.form.name) return
+    //   // store/modules/postのアクシpostCustomerを呼び出し、
+    //   this.$store.dispatch('post/createPost', this.form)
+    //   this.$router.push({ path: '/post/index' })
+    // },
     handleSubmit() {
       this.$emit('handleSubmit')
     },

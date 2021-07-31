@@ -5,11 +5,42 @@
         <span>新規登録</span>
       </router-link>
     </el-row>
-    <!-- <PostTable
+    <PostTable
       :key="key"
       :posts="posts"
       @handleEdit="doUpdate"
       @handleDelete="doDelete"
-    /> -->
+    />
   </div>
 </template>
+
+<script>
+import PostTable from './components/PostTable'
+
+export default {
+  name: 'Post',
+  components: { PostTable },
+  data() {
+    return {
+      key: 0
+    }
+  },
+  methods: {
+    doUpdate(index, row) {
+      this.$router.push({
+        name: 'editPost',
+        params: { form: row }
+      })
+    },
+    doDelete(index, row) {
+      const ans = confirm(this.$t('post.delete_message'))
+      if (!ans) return
+      this.$store.dispatch('post/deletePost', row)
+      this.$nextTick(() => {
+        this.$store.dispatch('post/getPosts')
+        this.key = this.key ? 0 : 1
+      })
+    }
+  }
+}
+</script>
