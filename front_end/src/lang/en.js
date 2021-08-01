@@ -65,7 +65,8 @@ export default {
     profile: 'Profile',
     customer: 'Customer',
     edit_customer: 'Edit Customer',
-    new_customer: 'Add Customer'
+    new_customer: 'Add Customer',
+    post: 'Post'
   },
   navbar: {
     dashboard: 'Dashboard',

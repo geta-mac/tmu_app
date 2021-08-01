@@ -65,7 +65,8 @@ export default {
     profile: 'プロフィール',
     customer: '顧客情報',
     edit_customer: '顧客情報変更',
-    new_customer: '顧客情報追加'
+    new_customer: '顧客情報追加',
+    post: '投稿情報'
   },
   navbar: {
     dashboard: 'トップ',
@@ -189,7 +190,7 @@ export default {
     delete_message: '削除してもよろしいですか？'
   },
   post: {
-    name: '名前',
+    name: '件名',
     content: '内容'
   },
   gender: {
