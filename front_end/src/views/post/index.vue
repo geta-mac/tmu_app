@@ -31,6 +31,9 @@ export default {
       posts: 'post/postAll'
     })
   },
+  mounted() {
+    this.$store.dispatch('post/getPosts')
+  },
   methods: {
     doUpdate(index, row) {
       this.$router.push({

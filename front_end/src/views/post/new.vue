@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       form: {
-        name: '',
+        title: '',
         content: ''
       },
       process: 'Create'
@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     handleSubmit() {
-      if (!this.form.name) return
+      if (!this.form.title) return
       this.$store.dispatch('post/createPost', this.form)
       this.$router.push({ path: '/post/index' })
     },

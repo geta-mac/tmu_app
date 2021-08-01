@@ -1,7 +1,7 @@
 <template>
   <el-form ref="form" :model="form" label-width="120px">
-    <el-form-item :label="$t('post.name')">
-      <el-input v-model="form.name" />
+    <el-form-item :label="$t('post.title')">
+      <el-input v-model="form.title" />
     </el-form-item>
     <el-form-item :label="$t('post.content')">
       <el-input v-model="form.content" />
@@ -21,7 +21,7 @@ export default {
       type: Object,
       default() {
         return {
-          name: '',
+          title: '',
           content: ''
         }
       }
@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     onSubmit() {
-      if (!this.form.name) return
+      if (!this.form.title) return
       // store/modules/postのアクシpostCustomerを呼び出し、
       this.$store.dispatch('post/createPost', this.form)
       this.$router.push({ path: '/post/index' })

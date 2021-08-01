@@ -190,7 +190,7 @@ export default {
     delete_message: 'May I delete it?'
   },
   post: {
-    name: 'Name',
+    title: 'Title',
     content: 'Content'
   },
   gender: {

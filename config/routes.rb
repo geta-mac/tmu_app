@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       get '/infos', to: 'infos#index'
       resources :customers
+      resources :posts
     end
   end
 end

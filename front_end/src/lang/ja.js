@@ -190,7 +190,7 @@ export default {
     delete_message: '削除してもよろしいですか？'
   },
   post: {
-    name: '件名',
+    title: '件名',
     content: '内容'
   },
   gender: {

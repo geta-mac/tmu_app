@@ -10,8 +10,8 @@
       height="100"
     />
     <el-table-column
-      prop="name"
-      :label="$t('post.name')"
+      prop="title"
+      :label="$t('post.title')"
       width="180"
     />
     <el-table-column>
