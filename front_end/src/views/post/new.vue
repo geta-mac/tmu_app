@@ -5,8 +5,7 @@
     </el-row>
     <PostForm
       :form="form"
-      :name="name"
-      :content="content"
+      :process="process"
       @handleSubmit="handleSubmit"
       @handleCancel="handleCancel"
     />

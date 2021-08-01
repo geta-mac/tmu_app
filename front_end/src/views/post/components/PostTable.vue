@@ -5,7 +5,7 @@
   >
     <el-table-column
       prop="content"
-      :label="$t('post.contetnt')"
+      :label="$t('post.content')"
       width="180"
       height="100"
     />

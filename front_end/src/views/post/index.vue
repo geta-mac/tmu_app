@@ -16,6 +16,7 @@
 
 <script>
 import PostTable from './components/PostTable'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'Post',
@@ -24,6 +25,11 @@ export default {
     return {
       key: 0
     }
+  },
+  computed: {
+    ...mapGetters({
+      posts: 'post/postAll'
+    })
   },
   methods: {
     doUpdate(index, row) {
