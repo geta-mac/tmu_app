@@ -28,7 +28,7 @@ const actions = {
           reject('Verification failed, please Login again.')
         }
         debugger
-        commit('SET_POST_ALL')
+        commit('SET_POST_ALL', data)
         resolve(data)
       }).catch(error => {
         reject(error)
