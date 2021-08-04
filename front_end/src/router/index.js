@@ -124,14 +124,14 @@ export const constantRoutes = [
         name: 'newPost',
         meta: { title: 'new_post', noCache: true },
         hidden: true
+      },
+      {
+        path: 'edit',
+        component: () => import('@/views/post/edit'),
+        name: 'editPost',
+        meta: { title: 'edit_post', noCache: true },
+        hidden: true
       }
-      // {
-      //   path: 'edit',
-      //   component: () => import('@/views/post/edit'),
-      //   name: 'editPost',
-      //   meta: { title: 'edit_post', noCache: true },
-      //   hidden: true
-      // }
     ]
   }
 
