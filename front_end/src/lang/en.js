@@ -191,7 +191,9 @@ export default {
   },
   post: {
     title: 'Title',
-    content: 'Content'
+    content: 'Content',
+    created_at: 'Created at',
+    updated_at: 'Updated at'
   },
   gender: {
     male: 'Male',

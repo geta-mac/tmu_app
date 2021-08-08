@@ -4,6 +4,7 @@ import {
   editPost,
   deletePost
 } from '@/api/post'
+import moment from 'moment'
 
 const state = {
   postAll: []
@@ -27,7 +28,14 @@ const actions = {
         if (!data) {
           reject('Verification failed, please Login again.')
         }
-        commit('SET_POST_ALL', data)
+        const posts = data.map(post => {
+          return {
+            ...post,
+            _created_at: moment(post.created_at).format('YYYY-MM-DD HH:mm:ss'),
+            _updated_at: moment(post.updated_at).format('YYYY-MM-DD HH:mm:ss')
+          }
+        })
+        commit('SET_POST_ALL', posts)
         resolve(data)
       }).catch(error => {
         reject(error)

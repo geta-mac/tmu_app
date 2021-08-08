@@ -191,7 +191,9 @@ export default {
   },
   post: {
     title: '件名',
-    content: '内容'
+    content: '内容',
+    created_at: '作成日時',
+    updated_at: '更新日時'
   },
   gender: {
     male: '男性',

@@ -3,14 +3,12 @@ class Api::V1::PostsController < ApplicationController
 
     # GET /posts or /posts.json
     def index
-      posts = Post.all
+      posts = Post.where(user_id: current_user.id)
       render json: { status: 'SUCCESS', message: 'Loaded posts', data: posts }
     end
 
     # GET /posts/1 or /posts/1.json
     def show
-      @post = Post.where(id: params[:id])
-      @user = User.find_by(id: @post.user_id)
     end
 
     # GET /posts/new
@@ -27,7 +25,7 @@ class Api::V1::PostsController < ApplicationController
       @post = Post.new(
         content: params[:content],
         title: params[:title],
-        user_id: @current_user.id
+        user_id: current_user.id
       )
       if @post.save
         render json: { status: 'SUCCESS', message: 'Saved post', data: @post }

@@ -4,14 +4,24 @@
     style="width: 100%"
   >
     <el-table-column
+      prop="title"
+      :label="$t('post.title')"
+      width="180"
+    />
+    <el-table-column
       prop="content"
       :label="$t('post.content')"
       width="180"
       height="100"
     />
     <el-table-column
-      prop="title"
-      :label="$t('post.title')"
+      prop="_created_at"
+      :label="$t('post.created_at')"
+      width="180"
+    />
+    <el-table-column
+      prop="_updated_at"
+      :label="$t('post.updated_at')"
       width="180"
     />
     <el-table-column>
