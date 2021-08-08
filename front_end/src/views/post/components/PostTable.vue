@@ -28,6 +28,7 @@
       <template slot-scope="scope">
         <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">Edit</el-button>
         <el-button size="mini" type="danger" @click="handleDelete(scope.$index, scope.row)">Delete</el-button>
+        <el-button size="mini" @click="handleDescription(scope.$index, scope.row)">詳細</el-button>
       </template>
     </el-table-column>
   </el-table>
@@ -49,6 +50,9 @@ export default {
     },
     handleDelete(index, row) {
       this.$emit('handleDelete', index, row)
+    },
+    handleDescription(index, row) {
+      this.$emit('handleDescription', index, row)
     }
   }
 }

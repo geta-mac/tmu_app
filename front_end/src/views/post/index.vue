@@ -10,6 +10,7 @@
       :posts="posts"
       @handleEdit="doUpdate"
       @handleDelete="doDelete"
+      @handleDescription="OpenDescription"
     />
   </div>
 </template>
@@ -48,6 +49,12 @@ export default {
       this.$nextTick(() => {
         this.$store.dispatch('post/getPosts')
         this.key = this.key ? 0 : 1
+      })
+    },
+    OpenDescription(index, row) {
+      this.$router.push({
+        name: 'descriptionPost',
+        params: { form: row }
       })
     }
   }

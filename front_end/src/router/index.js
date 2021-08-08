@@ -131,6 +131,13 @@ export const constantRoutes = [
         name: 'editPost',
         meta: { title: 'edit_post', noCache: true },
         hidden: true
+      },
+      {
+        path: 'description',
+        component: () => import('@/views/post/description'),
+        name: 'descriptionPost',
+        meta: { title: 'description_post', noCache: true },
+        hidden: true
       }
     ]
   }
