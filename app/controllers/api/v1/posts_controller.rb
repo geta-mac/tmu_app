@@ -9,6 +9,8 @@ class Api::V1::PostsController < ApplicationController
 
     # GET /posts/1 or /posts/1.json
     def show
+      @post = Post.where(id: params[:id])
+      @user = User.find_by(id: @post.user_id)
     end
 
     # GET /posts/new
@@ -22,7 +24,11 @@ class Api::V1::PostsController < ApplicationController
 
     # POST /posts or /posts.json
     def create
-      @post = Post.new(post_params)
+      @post = Post.new(
+        content: params[:content],
+        title: params[:title],
+        user_id: @current_user.id
+      )
       if @post.save
         render json: { status: 'SUCCESS', message: 'Saved post', data: @post }
       end
