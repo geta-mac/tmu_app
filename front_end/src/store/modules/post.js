@@ -32,10 +32,12 @@ const actions = {
           return {
             ...post,
             _created_at: moment(post.created_at).format('YYYY-MM-DD HH:mm:ss'),
-            _updated_at: moment(post.updated_at).format('YYYY-MM-DD HH:mm:ss')
+            _updated_at: moment(post.updated_at).format('YYYY-MM-DD HH:mm:ss'),
+            _content: post.content.length > 20 ? post.content.slice(0, 20) + '…' : post.content
           }
         })
         commit('SET_POST_ALL', posts)
+        console.log(posts)
         resolve(data)
       }).catch(error => {
         reject(error)

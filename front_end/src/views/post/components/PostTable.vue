@@ -9,9 +9,9 @@
       width="180"
     />
     <el-table-column
-      prop="content"
+      prop="_content"
       :label="$t('post.content')"
-      width="180"
+      width="320"
       height="100"
     />
     <el-table-column
