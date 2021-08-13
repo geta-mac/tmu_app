@@ -37,7 +37,6 @@ const actions = {
           }
         })
         commit('SET_POST_ALL', posts)
-        console.log(posts)
         resolve(data)
       }).catch(error => {
         reject(error)
