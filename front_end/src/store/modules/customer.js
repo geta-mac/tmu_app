@@ -32,8 +32,8 @@ const actions = {
           const gender = rootState.settings.genders.find(g => g.value === customer.gender)
           return {
             ...customer,
-            _prefecture: prefecture.text,
-            _gender: gender.text
+            _prefecture: prefecture ? prefecture.text : '',
+            _gender: gender ? gender.text : ''
           }
         })
         commit('SET_CUSTOMER_ALL', customers)
