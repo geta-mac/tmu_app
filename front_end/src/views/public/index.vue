@@ -6,5 +6,16 @@
       </router-link>
     </el-row>
     <p>public index</p>
+    <PublicTable />
   </div>
 </template>
+
+<script>
+import PublicTable from './components/PublicTable'
+
+export default {
+  components: {
+    PublicTable
+  }
+}
+</script>
