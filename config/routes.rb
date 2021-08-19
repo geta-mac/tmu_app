@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       get '/infos', to: 'infos#index'
       resources :customers
       resources :posts
+      resources :public
     end
   end
 end

@@ -6,16 +6,32 @@
       </router-link>
     </el-row>
     <p>public index</p>
-    <PublicTable />
+    <PublicTable
+      :key="key"
+      :publics="publics"
+    />
   </div>
 </template>
 
 <script>
 import PublicTable from './components/PublicTable'
+import { mapGetters } from 'vuex'
 
 export default {
-  components: {
-    PublicTable
+  name: 'Public',
+  components: { PublicTable },
+  data() {
+    return {
+      key: 0
+    }
+  },
+  computed: {
+    ...mapGetters({
+      publics: 'public/publicAll'
+    })
+  },
+  mounted() {
+    this.$store.dispatch('public/getPublics')
   }
 }
 </script>
