@@ -7,7 +7,7 @@
     </el-row>
     <div style="display: flex;">
       <Sidebar />
-      <PublicTable
+      <PublicList
         :key="key"
         :publics="publics"
       />
@@ -17,13 +17,13 @@
 
 <script>
 import Sidebar from './components/Sidebar'
-import PublicTable from './components/PublicTable'
+import PublicList from './components/PublicList'
 import { mapGetters } from 'vuex'
 
 export default {
   name: 'Public',
   components: {
-    PublicTable,
+    PublicList,
     Sidebar
   },
   data() {
