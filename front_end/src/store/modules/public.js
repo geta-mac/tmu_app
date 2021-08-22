@@ -24,7 +24,13 @@ const actions = {
         if (!data) {
           reject('Verification failed, please Login again.')
         }
-        commit('SET_PUBLIC_ALL', data)
+        const publics = data.map(post => {
+          return {
+            ...post,
+            _content: post.content.length > 20 ? post.content.slice(0, 20) + '…' : post.content
+          }
+        })
+        commit('SET_PUBLIC_ALL', publics)
         resolve(data)
       }).catch(error => {
         reject(error)
