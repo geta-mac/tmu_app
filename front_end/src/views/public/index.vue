@@ -5,7 +5,7 @@
         <span>ログイン</span>
       </router-link>
     </el-row>
-    <div class="aa">
+    <div style="display: flex;">
       <Sidebar />
       <PublicTable
         :key="key"
@@ -41,9 +41,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.aa {
-  display: flex;
-}
-</style>
