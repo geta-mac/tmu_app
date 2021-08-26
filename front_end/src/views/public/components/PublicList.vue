@@ -9,16 +9,13 @@
         <div class="l-wrapper_01">
           <article class="card_01">
             <div class="card__header_01">
-              <p class="card__title_01">{{ pub.title }}</p>
-              <figure class="card__thumbnail_01">
+              <div class="card_image_00">
                 <img src="https://dubdesign.net/wp-content/uploads/2020/05/0514_inhouse_designereyecatch.jpg" alt="サムネイル" class="card__image_01">
-              </figure>
-            </div>
-            <div class="card__body_01">
-              <p class="card__text2_01">{{ pub.content }}</p>
-            </div>
-            <div class="card__footer_01">
-              <p class="card__text_01"><a href="#" class="button_01 -compact">この記事を詳しく見る</a></p>
+              </div>
+              <div>
+                <p class="card__title_01">{{ pub.title }}</p>
+                <p class="card__text2_01">{{ pub._content }}</p>
+              </div>
             </div>
           </article>
         </div>
@@ -93,18 +90,20 @@ export default {
   padding: 1rem 1.5rem 0;
   font-size: 1.6rem;
   order: 1;
-  margin-bottom: 0.6rem;
   font-weight: bold;
   text-decoration: none;
 }
 
-.card__thumbnail_01 {
+/* .card__thumbnail_01 {
   margin: 0;
   order: 0;
-}
+} */
 
+.card_image_00 {
+  width: 30%;
+}
 .card__image_01 {
-  width: 50%;
+  width: 100%;
 }
 
 .card__body_01 {
@@ -119,7 +118,8 @@ export default {
 }
 
 .card__text2_01 {
-  font-size: .8rem;
+  font-size: 2rem;
+  margin-left: 2rem;
   margin-top: 0;
   margin-bottom: 2rem;
 }

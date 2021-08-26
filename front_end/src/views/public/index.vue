@@ -12,6 +12,10 @@
         :publics="publics"
       />
     </div>
+    <div>
+      <a class="twitter-timeline" href="https://twitter.com/bot29742534?ref_src=twsrc%5Etfw">Tweets by bot29742534</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" />
+    </div>
   </div>
 </template>
 
