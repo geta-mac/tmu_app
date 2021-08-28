@@ -4,7 +4,7 @@ class Api::V1::PostsController < ApplicationController
     # GET /posts or /posts.json
     def index
       posts = Post.where(user_id: current_user.id)
-      render json: { status: 'SUCCESS', message: 'Loaded posts', data: posts }
+      render json: posts, methods: [:image_url]
     end
 
     # GET /posts/1 or /posts/1.json
@@ -22,21 +22,22 @@ class Api::V1::PostsController < ApplicationController
 
     # POST /posts or /posts.json
     def create
-      @post = Post.new(
-        content: params[:content],
-        title: params[:title],
-        user_id: current_user.id
-      )
-      if @post.save
-        render json: { status: 'SUCCESS', message: 'Saved post', data: @post }
+      @post = Post.new(post_params)
+      @post.user_id = current_user.id
+      if @post.save!
+        render json: @post, methods: [:image_url]
+      else
+        render json: @post.errors, status: 422
       end
     end
 
     # PATCH/PUT /posts/1 or /posts/1.json
     def update
-      @post = Post.find(params[:id])
+      @post = Post.find(params[:id])      
       if @post.update(post_params)
-        render json: { status: 'SUCCESS', message: 'Saved post', data: @post }
+        render json: @post
+      else
+        render json: @post.errors, status: 422
       end
     end
 
@@ -54,8 +55,6 @@ class Api::V1::PostsController < ApplicationController
 
       # Only allow a list of trusted parameters through.
       def post_params
-        params.fetch(:post, {}).permit(
-          :title, :content, :user_id
-        )
+        params.permit(:title, :content, :image)
       end
   end

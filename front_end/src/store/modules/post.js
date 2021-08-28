@@ -23,10 +23,9 @@ const getters = {
 const actions = {
   getPosts({ commit, state, rootState }) {
     return new Promise((resolve, reject) => {
-      getPosts(state.token).then(response => {
-        const { data } = response
+      getPosts(state.token).then(data => {
         if (!data) {
-          reject('Verification failed, please Login again.')
+          reject('Not Find Data')
         }
         const posts = data.map(post => {
           return {

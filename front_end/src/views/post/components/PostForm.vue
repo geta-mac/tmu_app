@@ -7,6 +7,21 @@
       <el-input v-model="form.content" />
     </el-form-item>
     <el-form-item>
+      <el-upload
+        ref="upload"
+        class="upload-demo"
+        drag
+        action="#"
+        :on-preview="handlePreview"
+        :on-remove="handleRemove"
+        :auto-upload="false"
+      >
+        <i class="el-icon-upload" />
+        <div class="el-upload__text">Drop file here or <em>click to upload</em></div>
+        <div slot="tip" class="el-upload__tip">jpg/png files with a size less than 500kb</div>
+      </el-upload>
+    </el-form-item>
+    <el-form-item>
       <!-- クリックでonSubmitイベントが発火 -->
       <el-button type="primary" @click="handleSubmit">{{ process }}</el-button>
       <el-button @click="handleCancel">Cancel</el-button>
@@ -33,6 +48,11 @@ export default {
       }
     }
   },
+  data() {
+    return {
+      fileList: []
+    }
+  },
   methods: {
     onSubmit() {
       if (!this.form.title) return
@@ -41,10 +61,17 @@ export default {
       this.$router.push({ path: '/post/index' })
     },
     handleSubmit() {
-      this.$emit('handleSubmit')
+      this.$emit('handleSubmit', this.$refs.upload.uploadFiles)
     },
     handleCancel() {
       this.$emit('handleCancel')
+    },
+    // リストのバッテンを押下した時
+    handleRemove(file, fileList) {
+      this.fileList = fileList
+    },
+    handlePreview(file) {
+      console.log(file)
     }
   }
 }

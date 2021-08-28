@@ -26,9 +26,13 @@ export default {
     }
   },
   methods: {
-    handleSubmit() {
+    handleSubmit(fileList) {
       if (!this.form.title) return
-      this.$store.dispatch('post/createPost', this.form)
+      const formData = new FormData()
+      formData.append('image', fileList[0].raw)
+      formData.append('title', this.form.title)
+      formData.append('content', this.form.content)
+      this.$store.dispatch('post/createPost', formData)
       this.$router.push({ path: '/post/index' })
     },
     handleCancel() {

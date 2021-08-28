@@ -6,6 +6,9 @@
     <el-form-item :label="$t('post.content')">
       <el-input v-model="form.content" />
     </el-form-item>
+    <el-form-item :label="$t('post.content')">
+      <img :src="form.image_url">
+    </el-form-item>
     <el-form-item>
       <!-- クリックでonSubmitイベントが発火 -->
       <el-button @click="handleBack">Back</el-button>
@@ -21,7 +24,8 @@ export default {
       default() {
         return {
           title: '',
-          content: ''
+          content: '',
+          image_url: ''
         }
       }
     },

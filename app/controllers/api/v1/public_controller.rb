@@ -4,7 +4,7 @@ class Api::V1::PublicController < ApplicationController
   # GET /posts or /posts.json
   def index
     posts = Post.all
-    render json: { status: 'SUCCESS', message: 'Loaded posts', data: posts }
+    render json: posts, methods: [:image_url]
   end
 
   # GET /posts/1 or /posts/1.json
