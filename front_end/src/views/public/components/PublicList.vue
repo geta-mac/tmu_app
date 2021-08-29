@@ -118,7 +118,7 @@ export default {
 }
 
 .card__text2_01 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-left: 2rem;
   margin-top: 0;
   margin-bottom: 2rem;
@@ -156,5 +156,9 @@ export default {
 .button_01.-compact:hover,
 .button_01.-compact:focus {
   background-color: #6bb6ff;
+}
+
+ul {
+  list-style: none;
 }
 </style>
