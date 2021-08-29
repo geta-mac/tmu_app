@@ -4,6 +4,11 @@
       <div class="position">
         <ul>
           <li>部活動</li>
+          <li>
+            <router-link :to="'/dashboard'">
+              <span>ログイン</span>
+            </router-link>
+          </li>
         </ul>
       </div>
     </div>
