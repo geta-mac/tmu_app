@@ -34,8 +34,9 @@
         <span>Navigator Three</span>
       </el-menu-item>
       <el-menu-item index="4">
-        <i class="el-icon-setting" />
-        <span>Navigator Four</span>
+        <router-link :to="'/dashboard'" class="el-button el-button--primary">
+          <span>ログイン</span>
+        </router-link>
       </el-menu-item>
     </el-menu>
   </el-col>
