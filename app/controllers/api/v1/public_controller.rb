@@ -3,7 +3,8 @@ class Api::V1::PublicController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    render json: Post.all, methods: [:image_url]
+    posts = Post.all
+    render json: posts, methods: [:image_url]
   end
 
   # GET /posts/1 or /posts/1.json

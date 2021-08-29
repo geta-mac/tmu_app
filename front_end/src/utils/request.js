@@ -18,6 +18,8 @@ service.interceptors.request.use(
 
     // if (store.getters.token) {
     const tokens = getAll()
+    console.log('***************** request')
+    console.log(tokens)
     config.headers['access-token'] = tokens['TokenKey']
     config.headers['client'] = tokens['ClientKey']
     config.headers['uid'] = tokens['UidKey']
@@ -36,6 +38,7 @@ service.interceptors.response.use(
   response => {
     // 認証情報を保存
     const authHeaders = pick(response.headers, ['access-token', 'client', 'expiry', 'uid'])
+    console.log('***************** response')
     console.log(authHeaders)
     if (Object.keys(authHeaders).length) {
       store.dispatch('user/setAuth', authHeaders)

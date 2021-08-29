@@ -30,6 +30,9 @@ export function getToken() {
 }
 
 export function setToken(token) {
+  if (!token) {
+    return
+  }
   return Cookies.set(TokenKey, token)
 }
 
