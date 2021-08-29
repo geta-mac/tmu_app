@@ -4,7 +4,7 @@ class Api::V1::PostsController < ApplicationController
     # GET /posts or /posts.json
     def index
       posts = Post.where(user_id: current_user.id)
-      render json: { status: 'SUCCESS', message: 'Loaded posts', data: posts }
+      render json: Post.all, methods: [:image_url]
     end
 
     # GET /posts/1 or /posts/1.json
@@ -55,7 +55,7 @@ class Api::V1::PostsController < ApplicationController
       # Only allow a list of trusted parameters through.
       def post_params
         params.fetch(:post, {}).permit(
-          :title, :content, :user_id
+          :title, :content, :user_id, :image
         )
       end
   end

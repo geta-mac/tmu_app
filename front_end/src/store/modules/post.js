@@ -23,8 +23,8 @@ const getters = {
 const actions = {
   getPosts({ commit, state, rootState }) {
     return new Promise((resolve, reject) => {
-      getPosts(state.token).then(response => {
-        const { data } = response
+      getPosts(state.token).then(data => {
+        // const { data } = response
         if (!data) {
           reject('Verification failed, please Login again.')
         }
