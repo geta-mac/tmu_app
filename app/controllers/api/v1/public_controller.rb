@@ -31,6 +31,10 @@ class Api::V1::PublicController < ApplicationController
   def destroy
   end
 
+  def image_url
+    image.attached? ? url_for(image) : nil
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
@@ -40,7 +44,7 @@ class Api::V1::PublicController < ApplicationController
     # Only allow a list of trusted parameters through.
     def post_params
       params.fetch(:post, {}).permit(
-        :title, :content, :user_id
+        :title, :content, :image
       )
     end
 end

@@ -10,7 +10,7 @@
           <article class="card_01">
             <div class="card__header_01">
               <div class="card_image_00">
-                <img src="https://dubdesign.net/wp-content/uploads/2020/05/0514_inhouse_designereyecatch.jpg" alt="サムネイル" class="card__image_01">
+                <img :src="pub.image_url" alt="サムネイル" class="card__image_01">
               </div>
               <div>
                 <p class="card__title_01">{{ pub.title }}</p>
