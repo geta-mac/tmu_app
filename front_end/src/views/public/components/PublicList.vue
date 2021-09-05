@@ -101,6 +101,8 @@ export default {
 
 .card_image_00 {
   width: 30%;
+  display: flex;
+  align-items: center;
 }
 .card__image_01 {
   width: 100%;

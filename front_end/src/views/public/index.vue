@@ -1,17 +1,6 @@
 <template>
   <div class="pageContainer">
-    <div class="side set_sidebar">
-      <div class="position">
-        <ul>
-          <li>部活動</li>
-          <li>
-            <router-link :to="'/dashboard'">
-              <span>ログイン</span>
-            </router-link>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <Header />
     <div class="content">
       <img class="university_image" src="@/assets/university_images/castle-336498_1920.jpg" alt="大学の写真">
       <PublicList
@@ -23,14 +12,15 @@
 </template>
 
 <script>
-// import Sidebar from './components/Sidebar'
+import Header from './components/Header'
 import PublicList from './components/PublicList'
 import { mapGetters } from 'vuex'
 
 export default {
   name: 'Public',
   components: {
-    PublicList
+    PublicList,
+    Header
   },
   data() {
     return {
@@ -52,18 +42,6 @@ export default {
 .pageContainer {
   position: relative;
   min-height: 100%;
-}
-
-.set_sidebar {
-  position: absolute;
-  width: 200px;
-  height: 100%;
-  background-color: black;
-  color: white;
-}
-
-.content {
-  padding-left: 200px;
 }
 
 .university_image{
