@@ -27,16 +27,7 @@ const actions = {
         if (!data) {
           reject('Verification failed, please Login again.')
         }
-        const customers = data.map(customer => {
-          const prefecture = rootState.settings.prefectures.find(p => p.value === customer.prefecture)
-          const gender = rootState.settings.genders.find(g => g.value === customer.gender)
-          return {
-            ...customer,
-            _prefecture: prefecture ? prefecture.text : '',
-            _gender: gender ? gender.text : ''
-          }
-        })
-        commit('SET_CUSTOMER_ALL', customers)
+        commit('SET_CUSTOMER_ALL', data)
         resolve(data)
       }).catch(error => {
         reject(error)

@@ -3,7 +3,7 @@ class Api::V1::CustomersController < ApplicationController
 
   # GET /customers or /customers.json
   def index
-    customers = Customer.all
+    customers = User.all
     render json: { status: 'SUCCESS', message: 'Loaded customers', data: customers }
   end
 
@@ -13,7 +13,7 @@ class Api::V1::CustomersController < ApplicationController
 
   # GET /customers/new
   def new
-    @customer = Customer.new
+    @customer = User.new
   end
 
   # GET /customers/1/edit
@@ -22,7 +22,7 @@ class Api::V1::CustomersController < ApplicationController
 
   # POST /customers or /customers.json
   def create
-    @customer = Customer.new(customer_params)
+    @customer = User.new(user_params)
     if @customer.save
       render json: { status: 'SUCCESS', message: 'Saved customer', data: @customer }
     end
@@ -30,28 +30,28 @@ class Api::V1::CustomersController < ApplicationController
 
   # PATCH/PUT /customers/1 or /customers/1.json
   def update
-    @customer = Customer.find(params[:id])
-    if @customer.update(customer_params)
+    @customer = User.find(params[:id])
+    if @customer.update(user_params)
       render json: { status: 'SUCCESS', message: 'Saved customer', data: @customer }
     end
   end
 
   # DELETE /customers/1 or /customers/1.json
   def destroy
-    Customer.find(params[:id]).destroy
+    User.find(params[:id]).destroy
     render json: { status: 'SUCCESS', message: 'Removed customer' }
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_customer
-      @customer = Customer.find(params[:id])
+    def set_user_by_token
+      @customer = User.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
-    def customer_params
-      params.fetch(:customer, {}).permit(
-        :name, :phone, :email, :post_code, :prefecture, :address, :gender, :birthday, :memo
+    def user_params
+      params.fetch(:user, {}).permit(
+        :name, :nickname, :email, :password, :password_confirmation, :url
       )
     end
 end

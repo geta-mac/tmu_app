@@ -10,24 +10,20 @@
     />
     <el-table-column
       prop="name"
-      :label="$t('customer.name')"
+      :label="$t('user.name')"
       width="180"
     />
     <el-table-column
-      prop="phone"
-      :label="$t('customer.phone')"
-    />
-    <el-table-column
       prop="email"
-      :label="$t('customer.email')"
+      :label="$t('user.email')"
     />
     <el-table-column
-      prop="_prefecture"
-      :label="$t('customer.prefecture')"
+      prop="password"
+      :label="$t('user.password')"
     />
     <el-table-column
-      prop="address"
-      :label="$t('customer.address')"
+      prop="url"
+      :label="$t('user.url')"
     />
     <el-table-column>
       <template slot-scope="scope">
