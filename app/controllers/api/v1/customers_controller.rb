@@ -1,56 +1,56 @@
 class Api::V1::CustomersController < ApplicationController
-  before_action :set_customer, only: %i[ show edit update destroy ]
+  before_action :set_user, only: %i[ show edit update destroy ]
 
-  # GET /customers or /customers.json
+  # GET /users or /users.json
   def index
-    customers = User.all
-    render json: { status: 'SUCCESS', message: 'Loaded customers', data: customers }
+    users = User.all
+    render json: { status: 'SUCCESS', message: 'Loaded users', data: users }
   end
 
-  # GET /customers/1 or /customers/1.json
+  # GET /users/1 or /users/1.json
   def show
   end
 
-  # GET /customers/new
+  # GET /users/new
   def new
-    @customer = User.new
+    @user = User.new
   end
 
-  # GET /customers/1/edit
+  # GET /users/1/edit
   def edit
   end
 
-  # POST /customers or /customers.json
+  # POST /users or /users.json
   def create
-    @customer = User.new(user_params)
-    if @customer.save
-      render json: { status: 'SUCCESS', message: 'Saved customer', data: @customer }
+    @user = User.new(user_params)
+    if @user.save
+      render json: { status: 'SUCCESS', message: 'Saved user', data: @user }
     end
   end
 
-  # PATCH/PUT /customers/1 or /customers/1.json
+  # PATCH/PUT /users/1 or /users/1.json
   def update
-    @customer = User.find(params[:id])
-    if @customer.update(user_params)
-      render json: { status: 'SUCCESS', message: 'Saved customer', data: @customer }
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      render json: { status: 'SUCCESS', message: 'Saved user', data: @user }
     end
   end
 
-  # DELETE /customers/1 or /customers/1.json
+  # DELETE /users/1 or /users/1.json
   def destroy
     User.find(params[:id]).destroy
-    render json: { status: 'SUCCESS', message: 'Removed customer' }
+    render json: { status: 'SUCCESS', message: 'Removed user' }
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user_by_token
-      @customer = User.find(params[:id])
+      @user = User.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.fetch(:user, {}).permit(
+      params.permit(
         :name, :nickname, :email, :password, :password_confirmation, :url
       )
     end

@@ -47,18 +47,6 @@ export default {
       default() {
         return ''
       }
-    },
-    prefectures: {
-      type: Array,
-      default() {
-        return []
-      }
-    },
-    genders: {
-      type: Array,
-      default() {
-        return []
-      }
     }
   },
   methods: {
