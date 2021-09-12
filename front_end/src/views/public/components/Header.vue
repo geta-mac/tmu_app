@@ -24,7 +24,7 @@
     <el-menu-item index="3" disabled>Info</el-menu-item>
     <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">Orders</a></el-menu-item>
     <el-menu-item index="5">
-      <router-link :to="'/dashboard'">
+      <router-link :to="'/post'">
         <span>ログイン</span>
       </router-link>
     </el-menu-item>
