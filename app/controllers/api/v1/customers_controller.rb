@@ -1,5 +1,5 @@
 class Api::V1::CustomersController < ApplicationController
-  before_action :set_user, only: %i[ show edit update destroy ]
+  before_action :set_user_by_token, only: %i[ show edit update destroy ]
 
   # GET /users or /users.json
   def index
