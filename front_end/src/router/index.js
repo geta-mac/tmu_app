@@ -1,5 +1,4 @@
 import Vue from 'vue'
-// import store from '@/store'
 import Router from 'vue-router'
 
 Vue.use(Router)
@@ -27,9 +26,6 @@ import Layout from '@/layout'
     activeMenu: '/example/list'  if set path, the sidebar will highlight the path you set
   }
  */
-
-// debugger
-// const isAdmin = store.getters.roles.includes('admin')
 
 /**
  * constantRoutes
@@ -93,67 +89,6 @@ export const constantRoutes = [
       }
     ]
   }
-  // {
-  //   path: '/customer',
-  //   component: Layout,
-  //   redirect: '/customer/index',
-  //   children: [
-  //     {
-  //       path: 'index',
-  //       component: () => import('@/views/customer/index'),
-  //       name: 'Customer',
-  //       meta: { title: 'customer', icon: 'user', noCache: true, roles: ['admin'] }
-  //     },
-  //     {
-  //       path: 'new',
-  //       component: () => import('@/views/customer/new'),
-  //       name: 'newCustomer',
-  //       meta: { title: 'new_customer', noCache: true },
-  //       hidden: true
-  //     },
-  //     {
-  //       path: 'edit',
-  //       component: () => import('@/views/customer/edit'),
-  //       name: 'editCustomer',
-  //       meta: { title: 'edit_customer', noCache: true },
-  //       hidden: true
-  //     }
-  //   ]
-  // },
-  // {
-  //   path: '/post',
-  //   component: Layout,
-  //   redirect: '/post/index',
-  //   children: [
-  //     {
-  //       path: 'index',
-  //       component: () => import('@/views/post/index'),
-  //       name: 'Post',
-  //       meta: { title: 'post', icon: 'user', noCache: true }
-  //     },
-  //     {
-  //       path: 'new',
-  //       component: () => import('@/views/post/new'),
-  //       name: 'newPost',
-  //       meta: { title: 'new_post', noCache: true },
-  //       hidden: true
-  //     },
-  //     {
-  //       path: 'edit',
-  //       component: () => import('@/views/post/edit'),
-  //       name: 'editPost',
-  //       meta: { title: 'edit_post', noCache: true },
-  //       hidden: true
-  //     },
-  //     {
-  //       path: 'description',
-  //       component: () => import('@/views/post/description'),
-  //       name: 'descriptionPost',
-  //       meta: { title: 'description_post', noCache: true },
-  //       hidden: true
-  //     }
-  //   ]
-  // }
 ]
 
 /**
