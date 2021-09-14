@@ -88,7 +88,14 @@ export const constantRoutes = [
         meta: { title: 'profile', icon: 'user', noCache: true }
       }
     ]
-  },
+  }
+]
+
+/**
+ * asyncRoutes
+ * the routes that need to be dynamically loaded based on user roles
+ */
+export const asyncRoutes = [
   {
     path: '/customer',
     component: Layout,
@@ -98,7 +105,7 @@ export const constantRoutes = [
         path: 'index',
         component: () => import('@/views/customer/index'),
         name: 'Customer',
-        meta: { title: 'customer', icon: 'user', noCache: true }
+        meta: { title: 'customer', icon: 'user', noCache: true, roles: ['admin'] }
       },
       {
         path: 'new',
@@ -150,7 +157,6 @@ export const constantRoutes = [
       }
     ]
   }
-
 ]
 
 const createRouter = () => new Router({
