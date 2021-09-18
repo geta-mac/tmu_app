@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Club.create!(club_name: '学生自治会　執行委員会')
+Club.create!(club_name: '学生自治会 執行委員会')
 Club.create!(club_name: '学生ホール管理運営委員会')
 Club.create!(club_name: '体育会本部')
 Club.create!(club_name: '文化部連合')

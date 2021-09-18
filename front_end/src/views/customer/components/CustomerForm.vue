@@ -18,6 +18,14 @@
     <el-form-item :label="$t('user.url')" prop="url">
       <el-input v-model="form.url" type="textarea" />
     </el-form-item>
+    <el-select v-model="selected" placeholder="Select">
+      <el-option
+        v-for="cus in customers"
+        :key="cus.id"
+        :label="user.club_id"
+        :value="cus.value"
+      />
+    </el-select>
     <el-form-item>
       <el-button type="primary" @click="handleSubmit">{{ process }}</el-button>
       <el-button @click="handleCancel">Cancel</el-button>
@@ -65,7 +73,24 @@ export default {
         url: [
           { type: 'url', message: '正しいURLを入力してください。', trigger: 'blur' }
         ]
-      }
+      },
+      options: [{
+        value: 'Option1',
+        label: 'Option1'
+      }, {
+        value: 'Option2',
+        label: 'Option2'
+      }, {
+        value: 'Option3',
+        label: 'Option3'
+      }, {
+        value: 'Option4',
+        label: 'Option4'
+      }, {
+        value: 'Option5',
+        label: 'Option5'
+      }],
+      value: ''
     }
   },
   methods: {
