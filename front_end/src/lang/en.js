@@ -179,14 +179,12 @@ export default {
   },
   customer: {
     name: 'Name',
-    phone: 'Phone',
+    nickname: 'Nickname',
     email: 'Email',
-    post_code: 'Post Code',
-    address: 'Address',
-    prefecture: 'Prefecture',
-    gender: 'Gender',
-    birthday: 'Birthday',
-    memo: 'Memo',
+    url: 'URL',
+    password: 'Password',
+    pasword_confirmation: 'Password confirmation',
+    club_id: 'Club name',
     delete_message: 'May I delete it?'
   },
   post: {

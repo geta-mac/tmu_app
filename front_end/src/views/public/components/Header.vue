@@ -11,9 +11,10 @@
     <el-menu-item index="1">Processing Center</el-menu-item>
     <el-submenu index="2">
       <template slot="title">登録団体一覧</template>
-      <el-menu-item>item one</el-menu-item>
-      <el-menu-item index="2-2">item two</el-menu-item>
-      <el-menu-item index="2-3">item three</el-menu-item>
+      <el-menu-item>学生自治会 執行委員会</el-menu-item>
+      <el-menu-item index="2-2">学生ホール管理運営委員会</el-menu-item>
+      <el-menu-item index="2-3">体育会本部</el-menu-item>
+      <el-menu-item>文化部連合</el-menu-item>
     </el-submenu>
     <el-menu-item index="3" disabled>Info</el-menu-item>
     <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">Orders</a></el-menu-item>

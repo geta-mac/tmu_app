@@ -24,7 +24,8 @@ export default {
         email: '',
         password: '',
         password_confirmation: '',
-        url: ''
+        url: '',
+        club_id: ''
       },
       process: 'Edit'
     }

@@ -179,14 +179,12 @@ export default {
   },
   customer: {
     name: '名前',
-    phone: '電話番号',
+    nickname: '敬称',
     email: 'メールアドレス',
-    post_code: '郵便番号',
-    address: '住所',
-    prefecture: '都道府県',
-    gender: '性別',
-    birthday: '誕生日',
-    memo: 'メモ',
+    url: 'URL',
+    password: 'パスワード',
+    pasword_confirmation: 'パスワード確認',
+    club_id: 'クラブ名',
     delete_message: '削除してもよろしいですか？'
   },
   post: {
