@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts 'ユーザー'
-User.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password', admin: true)
+User.create!(email: 'admins@example.com', password: 'password', password_confirmation: 'password', admin: true)
 Club.create!(club_name: '学生自治会 執行委員会')
 Club.create!(club_name: '学生ホール管理運営委員会')
 Club.create!(club_name: '体育会本部')
