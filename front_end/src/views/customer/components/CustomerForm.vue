@@ -20,7 +20,7 @@
     </el-form-item>
     <el-form-item :label="$t('user.club_id')">
       <el-select v-model="form.club_id" placeholder="Select">
-        <el-option label="学生自治会 執行委員会" value="学生自治会 執行委員会" />
+        <el-option label="学生自治会 執行委員会" value="2" />
       </el-select>
     </el-form-item>
     <el-form-item>
