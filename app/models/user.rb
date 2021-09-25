@@ -8,4 +8,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   include DeviseTokenAuth::Concerns::User
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to_active_hash :club
 end
