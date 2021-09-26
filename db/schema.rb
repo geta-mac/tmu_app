@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2021_08_17_134339) do
   end
 
   create_table "clubs", force: :cascade do |t|
-    t.integer "club_name"
+    t.string "club_name"
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -90,6 +90,7 @@ ActiveRecord::Schema.define(version: 2021_08_17_134339) do
     t.datetime "updated_at", precision: 6, null: false
     t.text "url"
     t.boolean "admin", default: false
+    t.integer "club_id"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
