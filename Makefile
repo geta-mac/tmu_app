@@ -3,3 +3,6 @@ run.server:
 
 run.web:
 	cd ./front_end && yarn dev
+
+build.prod:
+	rm -rf ./public && cd ./front_end && yarn build:prod && mv ./dist ../public
