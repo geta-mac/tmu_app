@@ -1,17 +1,10 @@
 class Club <  ActiveHash::Base
   self.data = [
-    { id: 1, name: '---' },
-    { id: 2, name: '化粧水' },
-    { id: 3, name: '乳液' },
-    { id: 4, name: 'オールインワン' },
+    { id: 1, name: '学生自治会 執行委員会' },
+    { id: 2, name: '学生ホール管理運営委員会' },
+    { id: 3, name: '体育会本部' },
+    { id: 4, name: '文化部連合' },
     { id: 5, name: 'クレンジング' },
-    { id: 6, name: '洗顔料' },
-    { id: 7, name: '日焼け止め' },
-    { id: 8, name: 'リップ' },
-    { id: 9, name: '香水' },
-    { id: 10, name: 'ヘアカラー' },
-    { id: 11, name: 'ヘアスタイリング' },
-    { id: 12, name: 'シャンプー・コンディショナー' },
-    { id: 13, name: 'コンタクトレンズ' }
+    { id: 6, name: 'サークル連合理事会' }
   ]
 end
