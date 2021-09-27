@@ -21,6 +21,10 @@
       prop="url"
       :label="$t('customer.url')"
     />
+    <el-table-column
+      prop="clubname"
+      :label="$t('customer.club_id')"
+    />
     <el-table-column>
       <template slot-scope="scope">
         <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">Edit</el-button>

@@ -1,3 +1,4 @@
+import i18n from '@/lang'
 import {
   getCustomers,
   createCustomer,
@@ -27,8 +28,18 @@ const actions = {
         if (!data) {
           reject('Verification failed, please Login again.')
         }
-        commit('SET_CUSTOMER_ALL', data)
-        resolve(data)
+        const customers = data.map(customer => {
+          // pはオブジェクトのいち行目が入る
+          const club = customer.club_id ? rootState.settings.clubs.find(p => p.value === customer.club_id) : {}
+          return {
+            // スプレッド構文
+            // 配列の省略 カスターマーの一行目の情報（オブジェクト）
+            ...customer,
+            clubname: i18n.t(club.text)
+          }
+        })
+        commit('SET_CUSTOMER_ALL', customers)
+        resolve(customers)
       }).catch(error => {
         reject(error)
       })

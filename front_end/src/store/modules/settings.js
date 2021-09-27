@@ -7,7 +7,8 @@ const {
   fixedHeader,
   sidebarLogo,
   prefectures,
-  genders
+  genders,
+  clubs
 } = defaultSettings
 
 const state = {
@@ -17,7 +18,8 @@ const state = {
   fixedHeader: fixedHeader,
   sidebarLogo: sidebarLogo,
   prefectures: prefectures,
-  genders: genders
+  genders: genders,
+  clubs: clubs
 }
 
 const mutations = {
