@@ -42,5 +42,13 @@ module.exports = {
   genders: [
     { value: 1, text: 'gender.male' },
     { value: 2, text: 'gender.female' }
+  ],
+  clubs: [
+    { value: 1, text: '学生自治会 執行委員会' },
+    { value: 2, text: '学生ホール管理運営委員会' },
+    { value: 3, text: '体育会本部' },
+    { value: 4, text: '文化部連合' },
+    { value: 5, text: 'クレンジング' },
+    { value: 6, text: 'サークル連合理事会' }
   ]
 }

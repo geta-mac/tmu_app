@@ -22,7 +22,7 @@
       :label="$t('customer.url')"
     />
     <el-table-column
-      prop="club_id"
+      prop="clubname"
       :label="$t('customer.club_id')"
     />
     <el-table-column>

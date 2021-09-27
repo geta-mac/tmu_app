@@ -14,6 +14,7 @@ const getters = {
   permission_routes: state => state.permission.routes,
   errorLogs: state => state.errorLog.logs,
   prefectures: state => state.settings.prefectures,
-  genders: state => state.settings.genders
+  genders: state => state.settings.genders,
+  clubss: state => state.settings.clubs
 }
 export default getters
