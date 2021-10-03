@@ -183,7 +183,7 @@ export default {
     email: 'メールアドレス',
     url: 'URL',
     password: 'パスワード',
-    pasword_confirmation: 'パスワード確認',
+    password_confirmation: 'パスワード確認',
     club_id: 'クラブ名',
     delete_message: '削除してもよろしいですか？'
   },
