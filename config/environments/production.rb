@@ -109,7 +109,7 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
-
+  def default_url_options
   host = 'public'
-  Rails.application.routes.default_url_options[:host] = host
+  Rails.application.routes.default_url_options = { host: "www.infinite-island-33898.herokuapp.com", protocol: 'https' }
 end
