@@ -112,4 +112,5 @@ Rails.application.configure do
   def default_url_options
   host = 'public'
   Rails.application.routes.default_url_options = { host: "www.infinite-island-33898.herokuapp.com", protocol: 'https' }
+  end
 end
